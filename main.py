@@ -4,14 +4,15 @@ from datetime import date
 import csv
 from bs4 import BeautifulSoup
 import requests
+import pandas as pd
 
-minBedrooms = input("What is the minimum number of bedrooms you need? ")
-def find_flats():
+def find_flats(generateCSV = False):
     html_text = requests.get('https://www.rightmove.co.uk/property-to-rent/find.html?locationIdentifier=POSTCODE%5E319633&radius=1.0&propertyTypes=&includeLetAgreed=false&mustHave=&dontShow=&furnishTypes=&keywords=').text
     soup = BeautifulSoup(html_text, 'lxml')
     flats = soup.find_all("div", class_= "propertyCard-wrapper")
 
-    data = [['Address', 'NoOfBedrooms', 'TotalPrice', 'PricePerBedroom', 'Distance', 'Hyperlink']]
+
+    data = []
     for flat in flats:
 
         totalPrice = flat.find("span", class_ = "propertyCard-priceValue").text.strip()
@@ -26,9 +27,6 @@ def find_flats():
             bedrooms = 0
             pricePerRoom = totalPrice
 
-        if bedrooms < int(minBedrooms):
-            continue
-
         address = flat.find("address").text.strip().replace(',', '')
 
         distance = flat.find("div", class_="propertyCard-distance").text.split()[0]
@@ -38,16 +36,30 @@ def find_flats():
 
         data.append([address, bedrooms, totalPrice, pricePerRoom, distance, hyperlink])
 
-    with open(str(date.today())+".csv", 'w', newline= '') as f:
-        writer = csv.writer(f)
-        writer.writerows(data)
+    df = pd.DataFrame(data, columns= ['Address', 'No of Bedrooms', 'Total Price', 'Price per Bedroom', 'Distance', 'Hyperlink'])
 
-    print("CSV Created")
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.width', 1000)
+
+    while True:
+        minBedrooms = input("What is the minimum number of bedrooms you need? ")
+
+        try:
+            minBedrooms = int(minBedrooms)
+            break
+        except ValueError:
+            print("Please enter a valid integer.")
+
+    print(df.loc[df['No of Bedrooms'] >= minBedrooms])
+
+    if generateCSV == True:
+        df.to_csv(str(date.today()), index= False)
 
 
 if __name__ == '__main__':
     while True:
-        find_flats()
-        timeToWait = 86400 # 1 day -> 86400 seconds
+        find_flats(True)
         print("See you tomorrow!")
+        timeToWait = 86400 # 1 day -> 86400 seconds
         time.sleep(86400)
