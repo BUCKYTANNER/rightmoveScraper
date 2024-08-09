@@ -52,7 +52,8 @@ def find_flats(generateCSV = False):
     print(df.loc[df['No of Bedrooms'] >= minBedrooms])
 
     if generateCSV:
-        df.to_csv(str(date.today()), index=False)
+        fileName = str(date.today())
+        df.to_csv(fileName, index=False)
 
 
 if __name__ == '__main__':
