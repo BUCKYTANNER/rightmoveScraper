@@ -1,7 +1,5 @@
-import datetime
 import time
 from datetime import date
-import csv
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -53,8 +51,8 @@ def find_flats(generateCSV = False):
 
     print(df.loc[df['No of Bedrooms'] >= minBedrooms])
 
-    if generateCSV == True:
-        df.to_csv(str(date.today()), index= False)
+    if generateCSV:
+        df.to_csv(str(date.today()), index=False)
 
 
 if __name__ == '__main__':
