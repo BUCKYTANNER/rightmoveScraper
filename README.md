@@ -37,7 +37,7 @@ If you wish to save the data to a CSV file, simply pass True as an argument when
 ```
 find_flats(url, True)
 ```
-The user will be asked to enter a file name, if they do not it will default to naming the file the data.
+The user will be asked to enter a file name, if they do not it will default to naming the file the date.
 
 # Customization
 * <b>Search Criteria: </b> Modify the search URL to target specific areas or types of properties.
