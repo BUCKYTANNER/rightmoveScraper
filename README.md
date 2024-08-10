@@ -37,10 +37,10 @@ If you wish to save the data to a CSV file, simply pass True as an argument when
 ```
 find_flats(True)
 ```
-The file will be saved with the name being the date in the same directory as the script.
+The user will be asked to enter a file name, if they do not it will default to naming the file the data.
 
 # Customization
-* Search Criteria: Modify the search URL to target specific areas or types of properties.
-* Data Fields: Customize the fields you want to extract by adjusting the BeautifulSoup selectors.
-* CSV Filename: Change the filename in the CSV export section to your preferred name.
+* <b>Search Criteria: </b> Modify the search URL to target specific areas or types of properties.
+* <b>Data Fields: Customize </b> the fields you want to extract by adjusting the BeautifulSoup selectors.
+
   

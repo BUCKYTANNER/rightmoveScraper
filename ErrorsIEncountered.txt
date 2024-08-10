@@ -1,6 +1,0 @@
-Number of bedrooms = Studio
-    Added conditional to handle this case
-
-Encountered 403 Error
-    Looked into ways to get around it, decided it was easier to use a different website
-
