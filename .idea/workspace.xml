@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1bf548b-fb54-429d-9a8d-c3f1621507df" name="Changes" comment="removed unused imports, formatting">
+    <list default="true" id="f1bf548b-fb54-429d-9a8d-c3f1621507df" name="Changes" comment="refactored main program, small changes to read me, deleted pointless txt file, added todo's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <workItem from="1723222855058" duration="1037000" />
       <workItem from="1723233589640" duration="17000" />
       <workItem from="1723245148699" duration="10000" />
-      <workItem from="1723246798955" duration="1846000" />
+      <workItem from="1723246798955" duration="2423000" />
     </task>
     <task id="LOCAL-00001" summary="removed home.html">
       <option name="closed" value="true" />
@@ -98,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723227085830</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactored main program, small changes to read me, deleted pointless txt file, added todo's">
+      <option name="closed" value="true" />
+      <created>1723248997881</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723248997881</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,9 +138,11 @@
     <MESSAGE value="removed home.html" />
     <MESSAGE value="Incorporated pandas, made CSV generation optional, added user input validation" />
     <MESSAGE value="removed unused imports, formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unused imports, formatting" />
+    <MESSAGE value="refactored main program, small changes to read me, deleted pointless txt file" />
+    <MESSAGE value="refactored main program, small changes to read me, deleted pointless txt file, added todo's" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored main program, small changes to read me, deleted pointless txt file, added todo's" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/webScraping$main.coverage" NAME="main Coverage Results" MODIFIED="1723248653968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/webScraping$main.coverage" NAME="main Coverage Results" MODIFIED="1723248694640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
