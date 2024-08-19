@@ -68,7 +68,7 @@ def get_minBedrooms_from_user():
 
 
 def make_csv(df):
-    fileName = input("Enter name for .csv: ")  # TODO: Check if file name is valid
+    fileName = input("Enter name for .csv: ")
     if fileName == "":
         fileName = str(date.today())
 
@@ -88,7 +88,7 @@ def find_flats(url, generateCSV=False):
 if __name__ == '__main__':
     while True:
         urlToScrape = 'https://www.rightmove.co.uk/property-to-rent/find.html?locationIdentifier=POSTCODE%5E319633&radius=1.0&propertyTypes=&includeLetAgreed=false&mustHave=&dontShow=&furnishTypes=&keywords='
-        find_flats(urlToScrape, generateCSV=False) #TODO: refactor generateCSV, instead of paramater ask user for (Y/N) input
+        find_flats(urlToScrape, generateCSV=False)
         print("See you tomorrow!")
         timeToWait = 86400  # 1 day -> 86400 seconds
         time.sleep(86400)
